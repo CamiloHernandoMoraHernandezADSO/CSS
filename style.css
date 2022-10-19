@@ -15,15 +15,14 @@ body {
     text-align: center;
 }
 img {
-    width: auto;
-    height: 100%;
+    width: 100%;
     vertical-align: middle;
     max-height: 750px;
-    max-width: 1000px;
+    max-width: max-content;
 }
 
 .contentSlide {
-    height: 1000px;
+    height: 910px;
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -52,37 +51,41 @@ img {
     border-radius: 3px 0 0 3px;
 }
 
-
-
-.titleSlide{
-    text-align: center;
+span p{
     width: 100%;
-    padding: 1px 5px;
-    background-color: #717171;
-    border: 2px solid #686868;
+    display: inline-block;
+    margin: 0;
+    max-width: 300px;
+}
+.titleSlide{
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    font-size: 35px;
+    padding: 5px 0;
+    border-radius: 5px 5px 0;
+    background-color: #0c303f;
+    color: #e4dfcb;
 }
 
 .textSlide {
-    background-color: #717171;
+    background-color: #0c303f;
     color: #f2f2f2;
     font-size: 15px;
-    padding: 8px 12px;
+    padding: 20px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
     border-radius: 5px;
     display: block;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .puntos{
     text-align: center;
     padding: 5px;
-    margin: 10px;
+    margin: auto;
     align-items: center;
     display: block;
-    position: absolute;
-    right: 50%;
-    bottom: 20px;
-    width: auto;
+
 }
 
 .punto {
@@ -107,11 +110,21 @@ img {
 }
 
 @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+    from {
+        opacity: .4;
+        transform: translateX(-72px);
+    } 
+    to {
+        opacity: 1;
+        
+    }
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
     next,.text {font-size: 11px}
+    .titleSlide{
+        width: 100%;
+        margin: auto;
+    }
 }
